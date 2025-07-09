@@ -1,0 +1,140 @@
+/* Timeline Styles */
+.timeline {
+    position: relative;
+    max-width: 800px;
+    margin: 0 auto;
+    padding: 2rem 0;
+}
+
+.timeline::before {
+    content: '';
+    position: absolute;
+    width: 4px;
+    background-color: var(--accent-1);
+    top: 0;
+    bottom: 0;
+    left: 50px;
+    margin-left: -2px;
+    border-radius: 10px;
+}
+
+.timeline-item {
+    position: relative;
+    margin-bottom: 3rem;
+    padding-left: 90px;
+}
+
+.timeline-icon {
+    position: absolute;
+    left: 0;
+    width: 60px;
+    height: 60px;
+    border-radius: 50%;
+    background: var(--bg-primary);
+    border: 3px solid var(--accent-1);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: var(--accent-2);
+    font-size: 1.5rem;
+    z-index: 1;
+}
+
+.timeline-content {
+    background: rgba(127, 140, 170, 0.1);
+    padding: 2rem;
+    border-radius: 10px;
+    border-left: 4px solid var(--accent-1);
+    transition: var(--transition);
+}
+
+.timeline-content:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.2);
+}
+
+.timeline-header {
+    margin-bottom: 1rem;
+}
+
+.timeline-date {
+    display: block;
+    font-size: 0.9rem;
+    color: var(--accent-2);
+    margin-bottom: 0.5rem;
+    font-weight: 500;
+}
+
+.timeline-company {
+    color: var(--accent-1);
+    font-weight: 500;
+    margin-bottom: 0.5rem;
+}
+
+.skill-relevance {
+    margin: 1.5rem 0;
+}
+
+.skill-bar {
+    width: 100%;
+    height: 6px;
+    background: rgba(127, 140, 170, 0.2);
+    border-radius: 3px;
+    margin-bottom: 0.5rem;
+}
+
+.skill-progress {
+    height: 100%;
+    border-radius: 3px;
+}
+
+.skill-relevance span {
+    font-size: 0.8rem;
+    color: var(--accent-1);
+}
+
+.btn-timeline {
+    display: inline-flex;
+    align-items: center;
+    background: transparent;
+    color: var(--accent-2);
+    padding: 0.5rem 1.2rem;
+    border-radius: 30px;
+    text-decoration: none;
+    font-weight: 500;
+    transition: var(--transition);
+    border: 2px solid var(--accent-2);
+    font-size: 0.9rem;
+}
+
+.btn-timeline i {
+    margin-right: 0.5rem;
+}
+
+.btn-timeline:hover {
+    background: var(--accent-2);
+    color: var(--bg-primary);
+}
+
+.section-subtitle {
+    text-align: center;
+    color: var(--accent-1);
+    margin-top: 0.5rem;
+    font-size: 1rem;
+}
+
+@media (max-width: 768px) {
+    .timeline::before {
+        left: 30px;
+    }
+    
+    .timeline-item {
+        padding-left: 60px;
+    }
+    
+    .timeline-icon {
+        width: 50px;
+        height: 50px;
+        font-size: 1.2rem;
+    }
+}
